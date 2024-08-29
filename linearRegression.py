@@ -48,7 +48,14 @@ if __name__ == "__main__":
     final_error = lr.calculate_error(final_b, final_m)
     print(f"After {lr.num_iterations} iterations, b = {final_b}, m = {final_m}, MSE = {final_error}")
 
-    studyHours = float(input("enter study hours: "))
+    def getInput():
+        studyHours = input("enter study hours: ")
+        try:
+            return float(studyHours)
+        except ValueError:
+            print("invalid input, try entering a number")
+            return getInput()
+    studyHours = getInput()
     predictedScore = final_m * studyHours + final_b
     if predictedScore > 100:
         predictedScore = 100

@@ -15,7 +15,6 @@ class LinearRegression:
         return error
 
     def gradient_descent(self, b, m):
-        b, m = b, m
         for i in range(self.num_iterations):
             b, m = self.gradient_descent_step(b, m)
         return [b, m]

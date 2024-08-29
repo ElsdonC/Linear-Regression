@@ -19,3 +19,10 @@ Before gradient descent, b = 0, m = 0, MSE = 3537.6041666666665
 After 1500 iterations, b = 1.5682323364405246, m = 9.947097998639563, MSE = 21.73348156771939
 enter study hours: 
 ```
+Enter a random amount of study hours and the output will look like this:
+```
+Before gradient descent, b = 0, m = 0, MSE = 3537.6041666666665
+After 1500 iterations, b = 1.5682323364405246, m = 9.947097998639563, MSE = 21.73348156771939
+enter study hours: 7
+predicted score for studying 7.0 hours is 71.2%
+```

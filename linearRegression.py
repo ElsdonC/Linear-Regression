@@ -6,11 +6,11 @@ class LinearRegression:
         self.points = points
         self.num_iterations = num_iterations
 
-    def calculate_error(self, initial_b, initial_m):
+    def calculate_error(self, b, m):
         error = 0
         for i in range(len(self.points)):
             x, y = self.points[i][0], self.points[i][1]
-            error += (y - (initial_m * x) + initial_b)**2
+            error += (y - (m * x) + b)**2
         error /= len(self.points)
         return error
 

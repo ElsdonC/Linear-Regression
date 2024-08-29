@@ -1,3 +1,5 @@
+import csv
+
 class LinearRegression:
     def __init__(self, learning_rate, points, num_iterations):
         self.learning_rate = learning_rate
@@ -29,3 +31,12 @@ class LinearRegression:
         new_b = b - (self.learning_rate * gradient_b)
         new_m = m - (self.learning_rate * gradient_m)
         return [new_b, new_m]
+
+if __name__ == "__main__":
+    # process data
+    data = None
+    with open('data.csv', newline='') as csvfile:
+        lines = csvfile.readlines()[1:]
+        data = list(csv.reader(lines))
+    for row in data:
+        row[0], row[1] = float(row[0]), float(row[1])

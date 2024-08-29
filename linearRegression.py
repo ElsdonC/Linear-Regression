@@ -48,3 +48,9 @@ if __name__ == "__main__":
     [final_b, final_m] = lr.gradient_descent(initial_b, initial_m)
     final_error = lr.calculate_error(final_b, final_m)
     print(f"After {lr.num_iterations} iterations, b = {final_b}, m = {final_m}, MSE = {final_error}")
+
+    studyHours = float(input("enter study hours: "))
+    predictedScore = final_m * studyHours + final_b
+    if predictedScore > 100:
+        predictedScore = 100.00
+    print(f"predicted score for studying {studyHours} hours is {predictedScore}%")

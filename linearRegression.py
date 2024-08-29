@@ -40,3 +40,11 @@ if __name__ == "__main__":
         data = list(csv.reader(lines))
     for row in data:
         row[0], row[1] = float(row[0]), float(row[1])
+    
+    lr = LinearRegression(0.0001, data, 1500)
+    initial_b, initial_m = 0, 0
+    initial_error = lr.calculate_error(initial_b, initial_m)
+    print(f"Before gradient descent, b = {initial_b}, m = {initial_m}, MSE = {initial_error}")
+    [final_b, final_m] = lr.gradient_descent(initial_b, initial_m)
+    final_error = lr.calculate_error(final_b, final_m)
+    print(f"After {lr.num_iterations} iterations, b = {final_b}, m = {final_m}, MSE = {final_error}")

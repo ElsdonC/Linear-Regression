@@ -51,5 +51,6 @@ if __name__ == "__main__":
     studyHours = float(input("enter study hours: "))
     predictedScore = final_m * studyHours + final_b
     if predictedScore > 100:
-        predictedScore = 100.00
+        predictedScore = 100
+    predictedScore = round(predictedScore, 2)
     print(f"predicted score for studying {studyHours} hours is {predictedScore}%")

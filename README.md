@@ -1,4 +1,5 @@
 Linear Regression from Scratch in Python
+<br>
 Predicts test score based on hours studied
 
 ## Formulas Utilized
